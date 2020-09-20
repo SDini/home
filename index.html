@@ -1,0 +1,130 @@
+<html>
+<head>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+<link href='//fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+<style type="text/css">
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  background-image:url(./figs/mainMosqandMath.png);
+  background-repeat:no-repeat;
+  background-size:cover;
+}
+
+#host {
+  color: white;
+}
+
+.main-logo {
+  width: 200px;
+}
+
+.resbaz-logo {
+  width: 40px;
+}
+
+.list-label {
+  margin-left: 15%;
+}
+
+.list-group, .well {
+  width: 20em;
+}
+
+.top-spacer {
+  height: 30%;
+}
+
+.well {
+  background-color: white;
+}
+
+.col-sm-4.background-trans { background-color: rgba(255, 255, 255, 0.95); }
+.col-sm-8.background-trans { background-color: rgba(255, 255, 255, 0.95); }
+
+</style>
+<script type="text/javascript">
+$(function() {
+  var isIP = /^\d+\./.test(window.location.host);
+  if (isIP) {
+    $('#host').text(window.location.host);
+  } else {
+    var host = window.location.host.replace(/\..*$/, "");
+    var domain = window.location.host.replace(/^[^\.]+\./, "");
+    $('#host').text(host);
+    $('#parent-link').attr('href', window.location.protocol+"//"+domain+"/");
+  }
+});
+</script>
+</head>
+
+<body>
+
+<div class="container">
+  <div class="row hidden-xs top-spacer">
+    
+  </div>
+
+  <div class="row">
+      <div class="col-sm-offset-2 col-sm-8 background-trans">
+        <h1 class="text-center"> qMalaria Lab. </h1>
+        <h4 class="text-center"> <i> Quantitative Analysis of Malaria </i> </h4>
+      </div>
+  </div>
+<!-- Common tools -->
+  <div class="row">
+      <div class="col-sm-offset-2 col-sm-8 background-trans">
+      <nav class="navbar navbar-default">
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="https://mspgh.unimelb.edu.au/research-groups/centre-for-epidemiology-and-biostatistics-research/biostatistics">About us</a></li>
+                <li class="active">
+                  <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">Projects</a>
+                    <ul class="collapse list-unstyled" id="homeSubmenu">
+                      <li><a href="/shiny/appTACT/">TACT</a></li>
+                      <li><a href="#">Transmission</a></li>
+                      <li><a href="#">Baysian Inference</a></li>
+                      <li><a href="#">...</a></li>
+                    </ul>
+                </li>
+              <li><a href="https://www.unimelb.edu.au/">UniMelb</a></li>
+            </ul>
+          </div>
+                                
+      </nav>
+      </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-offset-2 col-sm-8 background-trans">
+
+      
+                                  <div class="col-sm-6">
+
+                                      <a id="parent-link">
+                                        <img class="main-logo center-block" src="./figs/Melbourne-Uni-logo.jpg"/></a>
+                                        <h5 class="text-center"> Centre for Epidemiology and Biostatistics<br>
+                                          Melbourne School of Population and Global Health <br>
+                                          University of Melbourne
+                                          </h5> 
+                                  </div>  
+
+                                  <div class="col-sm-6">
+                                      <!-- Common tools -->
+                                      <div class="list-group center-block", style = "text-align: justify;text-justify: inter-word;">
+                                        <h4> <strong> <em> Malaria </em> </strong> is one of the deadliest infectious diseases in the world. Despite the significant progress that has been made towards
+                                          the control and elimination of this disease, it still takes a heavy toll in malari-endemic regions.<br><br>
+                                          In this website, we aim to provide tools that enable you to do some quantitative analyses on malaria. <br><br> <a href="/shiny/MMV/"> <strong>Learn more ...</strong></a>
+                                        </h4>
+                                      </div>
+
+                                  </div>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
